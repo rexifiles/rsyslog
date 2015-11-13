@@ -1,0 +1,6 @@
+Name: Rex::Rsyslog
+Description: Installs rsyslog on a client, and allows update to the server
+Author: xarlos <xarlos@xarlos.me>
+License: Apache 2.0
+Require:
+  - Rex::Ext::ParamLookup

@@ -1,0 +1,19 @@
+use rex -feature => ['1.0'];
+use Rex::Ext::ParamLookup;
+
+include qw/ 
+   Rex::Rsyslog
+   /;
+
+set connection => 'OpenSSH';
+user root;
+
+
+task "setup", make {
+
+   my $ip  = '10.10.10.10';
+   logname = 'testclient';
+
+   Rex::Rsyslog::setup( ip => "$ip", logname => "$logfile");
+   Rex::Rsyslog::configadd( ip => "$ip" );
+};
